@@ -1,0 +1,145 @@
+:root {
+    --button-width: 50px;
+    --button-height: 60px;
+    --space: 5px;
+    --round: 1rem;
+    --button-color:  #14113d;
+    --button-border-color: #ccfbf1;
+    --calc-bg: rgba(77, 32, 131, 0.5);
+}
+
+html {
+    background: var(--button-color);
+    font-family: 'Teko', 'sans-serif';
+}
+
+body {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    color: #ccfbf1;
+}
+
+.container {
+    height: 520px;
+    display: flex;
+    align-items: flex-end;
+}
+
+.calculator {
+    display: flex;
+    flex-direction: column;
+    height: fit-content;
+    background-color: var(--calc-bg);
+    box-shadow: 0 0 100px rgba(77, 32, 131, 0.9);
+    border-radius: var(--round);
+}
+
+/* Display */
+.screen {
+    background-color: var(--button-border-color);
+    display: flex;
+    flex-direction: column;
+    border-radius: var(--round);
+    margin-bottom: var(--space);
+    color: var(--button-color);
+    box-sizing: border-box;
+    max-width: calc((var(--button-width) * 4) + (var(--space) * 3));
+}
+
+.screen-last {
+    height: 1.5rem;
+    color: inherit;
+    text-align: right;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-end;
+}
+
+.screen-last > * {
+    height: 1.5rem;
+    line-height: 1.5rem;
+    box-sizing: border-box;
+    padding-right: 1rem;
+    width: 100%;
+    border-bottom: 1px solid purple;
+}
+
+.screen-current {
+    height: 4rem;
+    width: 100%;
+    color: inherit;
+    font-size: 2rem; 
+    text-align: right;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.text-current {
+    padding-right: 1rem;
+    max-width: inherit;
+    max-height: 2rem;
+    overflow-x: auto;
+}
+
+/* Bottom Part */
+.buttons {
+    display: flex;
+    flex-direction: column;
+}
+
+.edit-buttons {
+    padding-bottom: var(--space);
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(4, 1fr);
+    gap: var(--space);
+}
+
+/* All buttons */
+
+.button-big {
+    width: calc((var(--button-width) * 2) + var(--space));
+}
+
+.button {
+    width: var(--button-width);
+    justify-self: center;
+}
+
+.b {
+    color: inherit;
+    font-family: inherit;
+    font-size: 1.5rem;
+    background-color: var(--button-color);
+    border: 2px solid var(--button-border-color);
+    border-radius: var(--round);
+    height: var(--button-height);
+    transition: all 0.1s ease-in-out;
+}
+
+.b:hover {
+    background-color: var(--calc-bg);
+    transform: scale(1.03);
+}
+
+.b:active {
+    background-color: var(--button-border-color);
+    transform: scale(0.95);
+}
+
+.error {
+    border: 2px solid red;
+}
+
+.grayed {
+    color: rgba(35, 82, 118, 0.5);
+}

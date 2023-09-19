@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Johnny J Calculator</title>
+    <link rel="stylesheet" href="reset.css">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Teko&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <div class="container">
+        <div class="calculator">
+            <div class="screen">
+                <div class="screen-last">
+
+                </div>
+                <div class="screen-current">
+                    <p class="text-current"></p>
+                </div>
+            </div>
+            <div class="buttons">
+                <div class="edit-buttons">
+                    <button class="b button-big" id="clear">Clear</button>
+                    <button class="b button-big" id="delete">Delete</button>
+                </div>
+                <div class="grid">
+                    <!-- First row -->
+                    <button class="b button" id="seven">7</button>
+                    <button class="b button" id="eight">8</button>
+                    <button class="b button" id="nine">9</button>
+                    <button class="b button" id="divide">÷</button>
+                    <!-- Second row -->
+                    <button class="b button" id="four">4</button>
+                    <button class="b button" id="five">5</button>
+                    <button class="b button" id="six">6</button>
+                    <button class="b button" id="multiply">x</button>
+                    <!-- Third row -->
+                    <button class="b button" id="one">1</button>
+                    <button class="b button" id="two">2</button>
+                    <button class="b button" id="three">3</button>
+                    <button class="b button" id="subtract">-</button>
+                    <!-- Fourth row -->
+                    <button class="b button" id="dot">.</button>
+                    <button class="b button" id="zero">0</button>
+                    <button class="b button" id="equal">=</button>
+                    <button class="b button" id="add">+</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="main.js"></script>
+</body>
+
+</html>
